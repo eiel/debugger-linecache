@@ -1,9 +1,10 @@
 # -*- encoding: utf-8 -*-
 require 'rubygems' unless defined? Gem
+require File.dirname(__FILE__) + "/lib/debugger/linecache"
 
 Gem::Specification.new do |s|
   s.name = "debugger-linecache"
-  s.version = "1.0.0"
+  s.version = Debugger::Linecache::VERSION
   s.authors = ["R. Bernstein", "Mark Moseley", "Gabriel Horner"]
   s.email = "gabriel.horner@gmail.com"
   s.homepage = "http://github.com/cldwalker/debugger-linecache"
