@@ -15,5 +15,5 @@ example in a debugger where the same lines are shown many times.
   s.extra_rdoc_files = ["README.md"]
   s.files = `git ls-files`.split("\n")
   s.extensions << "ext/trace_nums/extconf.rb"
-  s.add_dependency("ruby_core_source", ">= 0.1.5")
+  s.add_dependency "debugger-ruby_core_source"
 end
