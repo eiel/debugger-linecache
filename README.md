@@ -13,4 +13,4 @@ For more info see OLD\_README.
 
 ## LICENSE
 
-Original library was under gnu. This fork is licensed under MIT.
+This library is licensed under LICENSE.txt. Original was GNU.
