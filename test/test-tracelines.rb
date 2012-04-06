@@ -4,9 +4,6 @@ require 'test/unit'
 require 'fileutils'
 require 'tempfile'
 
-# require 'rubygems'
-# require 'ruby-debug'; Debugger.init
-
 SCRIPT_LINES__ = {} unless defined? SCRIPT_LINES__
 # Test TestLineNumbers module
 class TestLineNumbers1 < Test::Unit::TestCase
@@ -20,7 +17,7 @@ class TestLineNumbers1 < Test::Unit::TestCase
     first_line = fp.readline[1..-2]
     @@rcov_lnums = eval(first_line, binding, __FILE__, __LINE__)
   }
-  
+
   def test_for_file
     rcov_lines = TraceLineNumbers.lnums_for_file(@@rcov_file)
     assert_equal(@@rcov_lnums, rcov_lines)
@@ -33,8 +30,8 @@ class TestLineNumbers1 < Test::Unit::TestCase
   end
 
   def test_for_string_array
-    load(@@rcov_file, 0) 
-    rcov_lines = 
+    load(@@rcov_file, 0)
+    rcov_lines =
       TraceLineNumbers.lnums_for_str_array(SCRIPT_LINES__[@@rcov_file])
     assert_equal(@@rcov_lnums, rcov_lines)
   end

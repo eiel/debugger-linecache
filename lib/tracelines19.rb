@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 # $Id$
-begin require 'rubygems' rescue LoadError end
-# require 'ruby-debug' ; Debugger.start(:post-mortem => true)
 require 'trace_nums'
 
 module TraceLineNumbers

@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'pp'
-begin require 'rubygems' rescue LoadError end
 require 'parse_tree'
 
 ARGV.push "-" if ARGV.empty?

@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
 
-# begin require 'rubygems' rescue LoadError end
-# require 'ruby-debug' ; Debugger.start
-
 TEST_DIR = File.expand_path(File.dirname(__FILE__))
 TOP_SRC_DIR = File.join(TEST_DIR, '..')
 require File.join(TOP_SRC_DIR, 'lib', 'tracelines19.rb')
@@ -51,7 +48,7 @@ def dump_file(file, opts)
   if expected_lnums
     puts "expecting: #{expected_lnums.inspect}"
     puts '-' * 80
-    if expected_lnums 
+    if expected_lnums
       if got_lnums != expected_lnums
         puts "mismatch: #{got_lnums.inspect}"
       else
@@ -68,8 +65,8 @@ end
 require 'getoptlong'
 program = File.basename($0)
 opts = {
-  :print_source => true,  # Print source file? 
-  :print_trace  => true,  # Run Tracer over file? 
+  :print_source => true,  # Print source file?
+  :print_trace  => true,  # Run Tracer over file?
   :expect_line  => true,  # Source file has expected (correct) list of lines?
   :print_parse  => true,  # Show ParseTree output?
 }
@@ -88,7 +85,7 @@ getopts = GetoptLong.new(
 getopts.each do |opt, arg|
   case opt
     when '--help'
-    puts "usage 
+    puts "usage
 Usage: #{$program} [options] file1 file2 ...
 
 Diagnostic program to make see what TraceLineNumbers does and compare
@@ -125,6 +122,6 @@ options:
   end
 end
 
-ARGV.each do |file| 
+ARGV.each do |file|
   dump_file(file, opts)
 end
