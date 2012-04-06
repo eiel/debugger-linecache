@@ -17,4 +17,6 @@ example in a debugger where the same lines are shown many times.
   s.files = `git ls-files`.split("\n")
   s.extensions << "ext/trace_nums/extconf.rb"
   s.add_dependency "debugger-ruby_core_source"
+  s.add_development_dependency 'rake', '~> 0.9.2.2'
+  s.add_development_dependency 'rake-compiler', '~> 0.8.0'
 end
