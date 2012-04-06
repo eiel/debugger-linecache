@@ -10,6 +10,6 @@ hdrs = proc {
 }
 
 dir_config("ruby")
-if !Debugger::RubyCoreSource.create_makefile_with_core(hdrs, "trace_nums19")
+if !Debugger::RubyCoreSource.create_makefile_with_core(hdrs, "trace_nums")
   abort("Makefile creation failed.")
 end
