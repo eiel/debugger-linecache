@@ -1,3 +1,9 @@
+## 1.1.0
+* Point to new debugger-ruby_core_source API
+* rename trace_nums19 ext to trace_nums
+* Renable Rakefile and tests
+* General cleanup
+
 ## 1.0.1
 * Point to debugger-ruby_core_source as dependency
 
