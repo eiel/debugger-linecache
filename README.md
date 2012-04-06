@@ -10,3 +10,7 @@ For more info see OLD\_README.
 
 ## TODO
 * Fix todo test
+
+## LICENSE
+
+Original library was under gnu. This fork is licensed under MIT.
