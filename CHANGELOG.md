@@ -1,3 +1,6 @@
+## 1.1.1
+* Depend on working version of debugger-ruby-core-source
+
 ## 1.1.0
 * Point to new debugger-ruby_core_source API
 * rename trace_nums19 ext to trace_nums
