@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 # $Id$
 #
 #   Copyright (C) 2007, 2008 Rocky Bernstein <rockyb@rubyforge.net>
@@ -23,8 +22,6 @@
 #
 # = linecache
 # A module to read and cache lines of a Ruby program.
-# == Version
-# :include:VERSION
 
 # == SYNOPSIS
 #
