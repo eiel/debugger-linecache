@@ -1,3 +1,6 @@
+## 1.1.2
+* Fix rdoc/ri warning
+
 ## 1.1.1
 * Depend on working version of debugger-ruby-core-source
 
