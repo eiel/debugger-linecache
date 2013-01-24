@@ -11,6 +11,9 @@ For more info see OLD\_README.
 ## TODO
 * Fix todo test
 
+## Contributing
+[See here](http://tagaholic.me/contributing.html)
+
 ## LICENSE
 
 This library is licensed under LICENSE.txt. Original was GNU.
