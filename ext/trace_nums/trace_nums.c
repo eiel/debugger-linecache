@@ -26,17 +26,16 @@ VALUE mTraceLineNumbers;
 static inline const rb_data_type_t *
 threadptr_data_type(void)
 {
-        static const rb_data_type_t *thread_data_type;
-        if (!thread_data_type)
-        {
-                VALUE current_thread = rb_thread_current();
-                thread_data_type = RTYPEDDATA_TYPE(current_thread);
-        }
-        return thread_data_type;
+  static const rb_data_type_t *thread_data_type;
+  if (!thread_data_type) {
+    VALUE current_thread = rb_thread_current();
+    thread_data_type = RTYPEDDATA_TYPE(current_thread);
+  }
+  return thread_data_type;
 }
 
+#define ruby_thread_data_type *threadptr_data_type()
 #define ruby_threadptr_data_type *threadptr_data_type()
-#define ruby_current_thread ((rb_thread_t *)RTYPEDDATA_DATA(rb_thread_current()))
 
 /* Return a list of trace hook line numbers for the string in Ruby source src*/
 static VALUE
@@ -51,7 +50,7 @@ lnums_for_str(VALUE self, VALUE src)
   VALUE disasm_val;
 
   StringValue(src); /* Check that src is a string. */
-  th = GET_THREAD();
+  GetThreadPtr(rb_thread_current(), th);
 
   /* First compile to bytecode, using the method in eval_string_with_cref() in vm_eval.c */
   th->parse_in_eval++;
